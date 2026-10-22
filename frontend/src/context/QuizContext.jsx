@@ -15,6 +15,7 @@ export function QuizProvider({ children }) {
             const res = await fetch(API_URL);
             if (!res.ok) throw new Error('No se pudieron cargar las preguntas');
             const datos = await res.json();
+            console.log(datos)
             setPreguntas(datos);
             setError(null);
         } catch (error) {

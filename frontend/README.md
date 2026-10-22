@@ -1,16 +1,53 @@
-# React + Vite
+# QuizLab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+QuizLab es una aplicación web de preguntas y respuestas que desarrollé para practicar los temas vistos durante el curso de React.
 
-Currently, two official plugins are available:
+La idea es tener un pequeño juego de trivia donde se puedan registrar preguntas de diferentes categorías, seleccionar una respuesta y comprobar si es correcta o incorrecta
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologías utilizadas
 
-## React Compiler
+- React con Vite
+- JavaScript
+- HTML y CSS
+- Node.js y Express
+- MongoDB y Mongoose
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Funcionalidades
 
-## Expanding the ESLint configuration
+La aplicación cuenta con dos partes principales:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Administración de preguntas**
+
+Desde esta sección se pueden registrar nuevas preguntas con cuatro opciones de respuesta, seleccionar cuál es la correcta, agregar una categoría, dificultad y una explicación.
+
+También se pueden consultar, editar y eliminar las preguntas que ya están guardadas en la base de datos.
+
+**Juego de preguntas**
+
+En esta sección se muestran las preguntas registradas, una por una. El usuario puede seleccionar una respuesta y comprobar si acertó o no.
+
+Después de responder, se muestra una explicación y se puede continuar con la siguiente pregunta hasta terminar el cuestionario.
+
+## Temas que puse en práctica
+
+Durante el desarrollo utilicé componentes de React, props, `useState`, `useEffect`, Context API, eventos, formularios controlados y renderizado condicional.
+
+## Cómo ejecutar el proyecto
+
+Primero es necesario tener instalado Node.js y MongoDB.
+
+En la carpeta `backend`:
+
+```bash
+npm install
+npm run dev
+```
+
+En otra terminal, dentro de `frontend`:
+
+```bash
+npm install
+npm run dev
+```
+
+Es necesario configurar el archivo `.env` del backend con la conexión a MongoDB y el puerto correspondiente.
