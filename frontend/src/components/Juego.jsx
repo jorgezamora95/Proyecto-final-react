@@ -23,14 +23,19 @@ function Juego() {
     return <p>No hay preguntas disponibles.</p>;
   }
 
+  // Funcion que sirve para que el usuario al darle clic avance la pregunta
   const siguientePregunta = () => {
     setIndicePregunta((prev) => prev + 1);
   }
 
+
+// No importa en que pregunta vaya, si le da clic el usuario se reinicia el juego
   const reiniciarJuego = () => {
     setIndicePregunta(0)
   }
 
+//   Valida cuantas preguntas lleva
+// Tons si es igual o mayor pues ya no hay mas y ahi queda
   if (indicePregunta >= preguntas.length) {
     return (
         <section className= "juego" >
@@ -47,6 +52,7 @@ function Juego() {
 
   }
 
+//   Si es menor y aun hay pregunta las seguira mostrando
 
   return (
     <section className="juego">
